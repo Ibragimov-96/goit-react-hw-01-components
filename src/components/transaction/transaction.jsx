@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import styled from 'styled-components'
-const Tablet = styled.table`
-    border: solid 1px black;
-  `
+
   const Thead = styled.thead`
   background-color: #9b9494;
   
