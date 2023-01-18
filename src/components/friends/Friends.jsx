@@ -1,22 +1,6 @@
 import PropTypes from "prop-types";
-import styled from 'styled-components'
-const List = styled.ul`
-  
-display: flex;
+import { List, ListPoints,Image,Name } from "../friends/friendsStyle";
 
-;
-`
-const ListPoints = styled.li`
- padding: 20px;
- display: grid;
- justify-content: center;
-`
-const Image = styled.img`
- margin: auto;
-`
-const Name = styled.p`
- color: ${({isOnline}) => (isOnline ? "green" :"red")};
-`
 export const FriendList = ({friends}) =>{
  
    return (<List> {friends.map(({id,isOnline,avatar,name}) => (

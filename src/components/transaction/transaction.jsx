@@ -1,44 +1,31 @@
 import PropTypes from "prop-types";
-import styled from 'styled-components'
+import {Thead,TheadPoint,ListPoint} from '../transaction/transactionStyle'
 
-  const Thead = styled.thead`
-  background-color: #9b9494;
-  
-`
 
-const TheadPoint = styled.th`
-  border: solid 2px black;
-`
-const ListPoint = styled.td`
-  background-color: white;
-  border: solid 1px black;
-  
-`
 export const TransactionHistory =({items})=>{
- 
-  
-    return (
+
+
+  return (
 <table  className="transaction-history">
 <Thead>
-  <tr>
-    <TheadPoint>Type</TheadPoint>
-    <TheadPoint>Amount</TheadPoint>
-    <TheadPoint>Currency</TheadPoint>
-  </tr>
+<tr>
+  <TheadPoint>Type</TheadPoint>
+  <TheadPoint>Amount</TheadPoint>
+  <TheadPoint>Currency</TheadPoint>
+</tr>
 </Thead>
 <tbody >
 {items.map(({id,type,amount,currency}) => (
-   
-  <tr key={id}>
-    <ListPoint>{type}</ListPoint>
-    <ListPoint>{amount}</ListPoint>
-    <ListPoint>{currency}</ListPoint>
-  </tr>
-  
+ 
+<tr key={id}>
+  <ListPoint>{type}</ListPoint>
+  <ListPoint>{amount}</ListPoint>
+  <ListPoint>{currency}</ListPoint>
+</tr>
+
 ))}
 </tbody>
 </table>)}
-
 TransactionHistory.propTypes={
   
   items:PropTypes.arrayOf(PropTypes.shape({
