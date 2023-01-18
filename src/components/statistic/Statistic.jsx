@@ -24,7 +24,7 @@ export const Statistics = ({title,stats}) => {
 )}
 Statistics.propTypes={
   title:PropTypes.string,
-  stats:PropTypes.object(PropTypes.shape({
+  stats:PropTypes.exact(PropTypes.shape({
     id:PropTypes.string,
     label:PropTypes.string,
     percentage:PropTypes.number,}))
